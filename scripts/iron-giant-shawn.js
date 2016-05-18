@@ -15,6 +15,10 @@ module.exports = function(robot) {
         msg.reply("I fix");
     });
 
+    robot.respond(/hello Jacob)\s?\?/i, function(msg){​
+        msg.reply("I'm not Jacob. I am the iron giant");
+    });
+
     robot.hear(/bang/i, function(msg){
         msg.send("I am not a gun");
     });
