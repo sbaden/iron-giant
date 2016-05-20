@@ -42,9 +42,7 @@ module.exports = function(robot) {
         "When nine hundred years old you reach, look as good, you will not.",
         "No. There is... another... Sky... walker..."
     ];
-
-    module.exports = function(robot) {
-      return robot.hear(/What does yoda think?/, function(msg) {
+    robot.hear(/What does yoda think?/, function(msg) {
         return msg.send(msg.random(quotes));
-      });
-    };
+    });
+};
