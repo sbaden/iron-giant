@@ -5,7 +5,7 @@
 module.exports = function(robot) {
 
     robot.respond(/help/, function(msg){​
-        msg.reply("I fix");
+        return msg.reply("I fix");
     });
 
     // robot.respond(/hello Jacob)\s?\?/i, function(msg){​
