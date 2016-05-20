@@ -42,7 +42,7 @@ module.exports = function(robot) {
         "When nine hundred years old you reach, look as good, you will not.",
         "No. There is... another... Sky... walker..."
     ];
-    robot.hear(/Hi!/, function(res){
+    robot.hear(/What does yoda think?/, function(res){
         return res.send(quotes);
     });
 };
