@@ -17,7 +17,7 @@ module.exports = function(robot) {
         return res.send(res.random(leaveReplies));
     });
 
-    robot.hear(/Hotdog!/, function(res){
-        return res.send('hamburger!');
+    robot.hear(/Bye!/, function(res){
+        return res.send("Goodbye!");
     });
 };
