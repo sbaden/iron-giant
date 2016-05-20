@@ -3,7 +3,7 @@ module.exports = function(robot) {
        return res.send("I'm a robot--I don't eat food!");
      });
 
-    robot.hear(/Hi there!/, function(res){
+    robot.hear(/Hi!/, function(res){
         return res.send("No but I wish I was!");
     });
 
