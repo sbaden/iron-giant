@@ -19,6 +19,11 @@ robot.leave(function(res) {
 });
 
 
+robot.respond(/(image|img)( me)? (.+)/i, function(msg) {
+  return imageMe(msg, msg.match[3], function(url) {
+    return msg.send(url);
+  });
+});
 
 
 };
