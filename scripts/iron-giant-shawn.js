@@ -44,7 +44,7 @@ module.exports = function(robot) {
     ];
 
     module.exports = function(robot) {
-      return robot.hear(/.*(yoda quote).*/i, function(msg) {
+      return robot.hear(/What does yoda think?/, function(msg) {
         return msg.send(msg.random(quotes));
       });
     };
