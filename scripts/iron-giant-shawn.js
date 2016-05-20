@@ -29,7 +29,7 @@ module.exports = function(robot) {
         "No. There is... another... Sky... walker..."
     ];
 
-    robot.hear(/Hi!/, function(res){
+    robot.hear(/Yoda!/, function(res){
         // return res.send("No but I wish I was!");
         return res.send(res.random(quotes));
     });
