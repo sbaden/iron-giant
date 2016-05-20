@@ -4,7 +4,25 @@ module.exports = function(robot) {
     robot.hear(/Hello!/, function(res){
         return res.send("Hi there!");
     });
+
+
+var enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you'];
+
+var leaveReplies = ['Are you still there?', 'Target lost', 'Searching'];
+
+robot.enter(function(res) {
+  return res.send(res.random(enterReplies));
+});
+
+robot.leave(function(res) {
+  return res.send(res.random(leaveReplies));
+});
+
+
+
+
 };
+
 
 
 //// stuff 
