@@ -23,16 +23,17 @@ robot.hear(/Magic8/, function(res){
 // compair = win or lose
 
 var computerChoice = Math.random();
+var computerChoice2 = "text"
 if (computerChoice < 0.34) {
-    computerChoice = "Rock";
+    computerChoice2 = "Rock";
 } else if(computerChoice <= 0.67) {
-    computerChoice = "Paper";
+    computerChoice2 = "Paper";
 } else {
-    computerChoice = "Scissors";
+    computerChoice2 = "Scissors";
 }
 
 robot.hear(/what did you pick/, function(res){
-	res.send(computerChoice);
+	res.send(computerChoice2);
 });
 
 
