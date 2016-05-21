@@ -23,6 +23,8 @@ robot.hear(/Magic8/, function(res){
 // compair = win or lose
 
 
+var RPS = function(user){
+
 var jacobPicks = function(){
 	var computerChoice = Math.random();
 	if (computerChoice <= 0.34) {
@@ -34,27 +36,25 @@ var jacobPicks = function(){
 	}
 };
 
+var compare = function (user, jacobPicks) {
+ if(user==jacobPicks)return "The result is a tie!";
+ switch(user+jacobPicks){
+    case "rockscissors": case "scissorsrock":
+        return "rock wins";
+    case "rockpaper": case "paperrock":
+        return "paper wins";
+    default: return "scissors wins";
+ }
+};
+};
+
+
+
 robot.respond(/Play RPS: I chose (.*)/i, function(res) {
    var user;
    user = res.match[1];
-   return res.reply(user + " || " + "Jacob = " + jacobselection + " || ");
+   return res.reply(RPS(user));
    
-
-// var compare = function (user, jacobselection) {
-//  if(user==jacobselection)return "The result is a tie!";
-//  switch(user+jacobselection){
-//     case "rockscissors": case "scissorsrock":
-//         return "rock wins";
-//     case "rockpaper": case "paperrock":
-//         return "paper wins";
-//     default: return "scissors wins";
-//  }
-// };
-
-
-// res.send(compare();)
-
-
 
 });
 
