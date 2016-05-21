@@ -23,8 +23,6 @@ robot.hear(/Magic8/, function(res){
 // compair = win or lose
 
 
-var RPS = function(user){
-
 var jacobPicks = function(){
 	var computerChoice = Math.random();
 	if (computerChoice <= 0.34) {
@@ -36,8 +34,10 @@ var jacobPicks = function(){
 	}
 };
 
+var RPS = function(user, jacobPicks){
+
 var compare = function (user, jacobPicks) {
- if(user==jacobPicks)return "The result is a tie!";
+ if(user===jacobPicks)return "The result is a tie!";
  switch(user+jacobPicks){
     case "rockscissors": case "scissorsrock":
         return "rock wins";
@@ -47,7 +47,6 @@ var compare = function (user, jacobPicks) {
  }
 };
 };
-
 
 
 robot.respond(/Play RPS: I chose (.*)/i, function(res) {
