@@ -23,7 +23,7 @@ robot.hear(/Magic8/, function(res){
 // compair = win or lose
 
 
-var jacobPicks = function(){
+var jacobPickss = function(){
 	var computerChoice = Math.random();
 	if (computerChoice <= 0.34) {
     	return "rock";
@@ -33,6 +33,8 @@ var jacobPicks = function(){
     return "scissors";
 	}
 };
+
+var jacobPicks = jacobPickss();
 
 var RPS = function(user, jacobPicks){
 
