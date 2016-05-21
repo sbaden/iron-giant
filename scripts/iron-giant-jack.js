@@ -41,19 +41,19 @@ robot.respond(/Play RPS: I chose (.*)/i, function(res) {
    res.reply(user + " || " + "Jacob = " + jacobselection + " || ");
    
 
-var compare = function (user, jacobselection) {
- if(user==jacobselection)return "The result is a tie!";
- switch(user+jacobselection){
-    case "rockscissors": case "scissorsrock":
-        return "rock wins";
-    case "rockpaper": case "paperrock":
-        return "paper wins";
-    default: return "scissors wins";
- }
-};
+// var compare = function (user, jacobselection) {
+//  if(user==jacobselection)return "The result is a tie!";
+//  switch(user+jacobselection){
+//     case "rockscissors": case "scissorsrock":
+//         return "rock wins";
+//     case "rockpaper": case "paperrock":
+//         return "paper wins";
+//     default: return "scissors wins";
+//  }
+// };
 
 
-res.send(compare();)
+// res.send(compare();)
 
 
 
