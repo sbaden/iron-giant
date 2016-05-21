@@ -22,7 +22,7 @@ robot.hear(/Magic8/, function(res){
 // get user's input 
 // compair = win or lose
 
-var jacobselection = jacobPicks();
+// var jacobselection = jacobPicks();
 
 var jacobPicks = function(){
 	var computerChoice = Math.random();
@@ -38,7 +38,7 @@ var jacobPicks = function(){
 robot.respond(/Play RPS: I chose (.*)/i, function(res) {
    var user;
    user = res.match[1];
-   res.reply(user + " || " + "Jacob = " + jacobselection + " || ");
+   return res.reply(user + " || " + "Jacob = " + jacobselection + " || ");
    
 
 // var compare = function (user, jacobselection) {
