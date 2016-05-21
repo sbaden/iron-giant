@@ -22,14 +22,7 @@ robot.hear(/Magic8/, function(res){
 // get user's input 
 // compair = win or lose
 
-robot.respond(/Play RPS: I chose (.*)/i, function(res) {
-   var user;
-   user = res.match[1];
-   res.reply(user + " || " + "Jacob = " + jacobPicks() + " || ");
-   res.send("and the winner is...")
-});
-
-var RPS = function() {};
+var jacobselection = jacobPicks();
 
 var jacobPicks = function(){
 	var computerChoice = Math.random();
@@ -42,6 +35,39 @@ var jacobPicks = function(){
     return "Scissors";
 	}
 };
+
+robot.respond(/Play RPS: I chose (.*)/i, function(res) {
+   var user;
+   user = res.match[1];
+   res.reply(user + " || " + "Jacob = " + jacobselection + " || ");
+   //res.send("and the winner is... " + RPS();)
+});
+
+
+res.send("test... " + user);
+res.send("test... " + jacobselection);
+
+// var RPS = function() {
+// 	switch (choice1) {
+//     	case 0:
+//         	day = "Sunday";
+//         	break;
+//     	case 1:
+//         	day = "Monday";
+//         	break;
+//     	case 2:
+//         	day = "Tuesday";
+//         	break;
+//     	case 3:
+//         	day = "Wednesday";
+//         	break;
+// 	    default:
+// 	    	day = 
+// }
+
+
+
+
 
 
 robot.hear(/what did you pick/, function(res){
@@ -62,29 +88,6 @@ robot.respond(/hello (.*)/i, function(res){
 
 
 
-// switch (choice1) {
-//     case 0:
-//         day = "Sunday";
-//         break;
-//     case 1:
-//         day = "Monday";
-//         break;
-//     case 2:
-//         day = "Tuesday";
-//         break;
-//     case 3:
-//         day = "Wednesday";
-//         break;
-//     case 4:
-//         day = "Thursday";
-//         break;
-//     case 5:
-//         day = "Friday";
-//         break;
-//     case 6:
-//         day = "Saturday";
-//         break;
-// }
 
 
 // robot.respond(/(image|img)( me)? (.+)/i, function(msg) {
