@@ -24,15 +24,21 @@ robot.hear(/Magic8/, function(res){
 
 var computerChoice = Math.random();
 var computerChoice2 = "text"
-if (computerChoice <= 0.34) {
-    computerChoice2 = "Rock";
-} else if(computerChoice > .34 && computerChoice <= 0.67) {
-    computerChoice2 = "Paper";
-} else {
+
+var jacobpicks = function(){
+
+	if (computerChoice <= 0.34) {
+    	computerChoice2 = "Rock";
+	} else if(computerChoice > .34 && computerChoice <= 0.67) {
+    	computerChoice2 = "Paper";
+	} else {
     computerChoice2 = "Scissors";
-}
+	}
+};
+
 
 robot.hear(/what did you pick/, function(res){
+	jacobpicks();
 	res.send(computerChoice2);
 });
 
