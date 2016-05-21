@@ -23,7 +23,8 @@ robot.hear(/Magic8/, function(res){
 // compair = win or lose
 
 var computerChoice = Math.random();
-var computerChoice2 = "text"
+var computerChoice2 = "text";
+var computerChoice3 = "text";
 
 var jacobPicks = function(){
 
@@ -36,11 +37,10 @@ var jacobPicks = function(){
 	}
 };
 
-jacobPicks();
+var computerChoice3 = jacobPicks();
 
 robot.hear(/what did you pick/, function(res){
-	res.send(computerChoice2);
-	jacobPicks();
+	res.send(computerChoice3);
 });
 
 
