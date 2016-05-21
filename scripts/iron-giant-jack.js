@@ -25,7 +25,7 @@ robot.hear(/Magic8/, function(res){
 robot.respond(/Play RPS: I chose (.*)/i, function(res) {
    var user;
    user = res.match[1];
-   return res.reply("You chose " + user + "||" + "Jacob = " + jacobPicks());
+   return res.reply(user + " || " + "Jacob = " + jacobPicks());
 });
 
 var RPS = function() {};
