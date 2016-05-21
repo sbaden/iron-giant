@@ -25,7 +25,15 @@ robot.hear(/Magic8/, function(res){
 //   }
 // });
 
-
+robot.respond(/open the (.*) doors/i, function(res) {
+  var doorType;
+  doorType = res.match[1];
+  if (doorType === "pod bay") {
+    return res.reply("I'm afraid I can't let you do that.");
+  } else {
+    return res.reply("Opening " + doorType + " doors");
+  }
+});
 
 
 // switch (choice1) {
