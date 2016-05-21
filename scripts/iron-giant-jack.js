@@ -26,6 +26,7 @@ robot.respond(/Play RPS: I chose (.*)/i, function(res) {
    var user;
    user = res.match[1];
    return res.reply(user + " || " + "Jacob = " + jacobPicks());
+   return res.send("and the winner is...")
 });
 
 var RPS = function() {};
