@@ -18,14 +18,14 @@ robot.hear(/Magic8/, function(res){
 // get user's input 
 // compair = win or lose
 
-var computerChoice = Math.random();
-if (computerChoice < 0.34) {
-    computerChoice = "Rock";
-} else if(computerChoice <= 0.67) {
-    computerChoice = "Paper";
-} else {
-    computerChoice = "Scissors";
-}
+// var computerChoice = Math.random();
+// if (computerChoice < 0.34) {
+//     computerChoice = "Rock";
+// } else if(computerChoice <= 0.67) {
+//     computerChoice = "Paper";
+// } else {
+//     computerChoice = "Scissors";
+// }
 
 
 
@@ -33,7 +33,6 @@ robot.respond(/hello (.*)/i, function(res){
 	var temp;
 	temp = res.match[1];
 	return res.reply(temp);
-	return res.reply(computerChoice);
 
 });
 
