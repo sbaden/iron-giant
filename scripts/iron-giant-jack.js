@@ -66,17 +66,17 @@ robot.respond(/Play RPS: I chose (.*)/i, function(res) {
 
 
 
-robot.hear(/what did you pick/, function(res){
-	res.send(jacobPicks());
-});
+// robot.hear(/what did you pick/, function(res){
+// 	res.send(jacobPicks());
+// });
 
 
-robot.respond(/hello (.*)/i, function(res){
-	var temp;
-	temp = res.match[1];
-	return res.reply(temp);
+// robot.respond(/hello (.*)/i, function(res){
+// 	var temp;
+// 	temp = res.match[1];
+// 	return res.reply(temp);
 
-});
+// });
 
 
 
