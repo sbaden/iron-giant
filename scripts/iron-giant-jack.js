@@ -24,9 +24,9 @@ robot.hear(/Magic8/, function(res){
 
 var computerChoice = Math.random();
 var computerChoice2 = "text"
-if (computerChoice < 0.34) {
+if (computerChoice <= 0.34) {
     computerChoice2 = "Rock";
-} else if(computerChoice <= 0.67) {
+} else if(computerChoice > .34 && computerChoice <= 0.67) {
     computerChoice2 = "Paper";
 } else {
     computerChoice2 = "Scissors";
