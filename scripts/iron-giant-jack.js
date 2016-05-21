@@ -22,7 +22,7 @@ robot.hear(/Magic8/, function(res){
 // get user's input 
 // compair = win or lose
 
-// var jacobselection = jacobPicks();
+var jacobselection = jacobPicks();
 
 var jacobPicks = function(){
 	var computerChoice = Math.random();
