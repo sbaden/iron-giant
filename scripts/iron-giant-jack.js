@@ -31,7 +31,10 @@ if (computerChoice < 0.34) {
     computerChoice = "Scissors";
 }
 
-res.send(computerChoice);
+robot.hear(/what did you pick/, function(res){
+	res.send(computerChoice);
+});
+
 
 robot.respond(/hello (.*)/i, function(res){
 	var temp;
