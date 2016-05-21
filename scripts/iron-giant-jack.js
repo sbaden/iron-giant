@@ -15,15 +15,15 @@ robot.hear(/Magic8/, function(res){
 // how do i pull a variable from Jacob? 
 
 
-// robot.respond(/Let's Play RPS, I chose (.*)/i, function(res) {
-//   var choice1;
-//   choice1 = res.match[0];
-//   if (choice1 === "Rock") {
-//     return res.reply("You chose Rock.");
-//   } else {
-//     return res.reply("You chose " + choice1 ".");
-//   }
-// });
+robot.respond(/Play RPS: I chose: (.*)/i, function(res) {
+   var choice1;
+   choice1 = res.match[1];
+   if (choice1 === "Rock") {
+     return res.reply("You chose Rock.");
+   } else {
+     return res.reply("You chose " + choice1 + ".");
+   }
+});
 
 robot.respond(/open the (.*) doors/i, function(res) {
   var doorType;
