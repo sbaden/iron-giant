@@ -54,7 +54,7 @@ var compare = function (user, jacobPicks) {
 robot.respond(/Play RPS: I chose (.*)/i, function(res) {
    var user;
    user = res.match[1];
-   return res.reply(RPS(user));
+   return res.reply(RPS(user, jacobPicks));
    
 
 });
