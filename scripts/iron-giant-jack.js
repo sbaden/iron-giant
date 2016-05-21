@@ -26,13 +26,12 @@ var jacobselection = jacobPicks();
 
 var jacobPicks = function(){
 	var computerChoice = Math.random();
-
 	if (computerChoice <= 0.34) {
-    	return "Rock";
+    	return "rock";
 	} else if(computerChoice > 0.34 && computerChoice <= 0.67) {
-    	return "Paper";
+    	return "paper";
 	} else {
-    return "Scissors";
+    return "scissors";
 	}
 };
 
@@ -40,30 +39,27 @@ robot.respond(/Play RPS: I chose (.*)/i, function(res) {
    var user;
    user = res.match[1];
    res.reply(user + " || " + "Jacob = " + jacobselection + " || ");
-   //res.send("and the winner is... " + RPS();)
+   
+
+var compare = function (user, jacobselection) {
+ if(user==jacobselection)return "The result is a tie!";
+ switch(user+jacobselection){
+    case "rockscissors": case "scissorsrock":
+        return "rock wins";
+    case "rockpaper": case "paperrock":
+        return "paper wins";
+    default: return "scissors wins";
+ }
+};
+
+
+res.send(compare();)
+
+
+
 });
 
 
-res.send("test... " + user);
-res.send("test... " + jacobselection);
-
-// var RPS = function() {
-// 	switch (choice1) {
-//     	case 0:
-//         	day = "Sunday";
-//         	break;
-//     	case 1:
-//         	day = "Monday";
-//         	break;
-//     	case 2:
-//         	day = "Tuesday";
-//         	break;
-//     	case 3:
-//         	day = "Wednesday";
-//         	break;
-// 	    default:
-// 	    	day = 
-// }
 
 
 
@@ -81,114 +77,6 @@ robot.respond(/hello (.*)/i, function(res){
 	return res.reply(temp);
 
 });
-
-
-
-
-
-
-
-
-
-// robot.respond(/(image|img)( me)? (.+)/i, function(msg) {
-//   return imageMe(msg, msg.match[3], function(url) {
-//     return msg.send(url);
-//   });
-// });
-
-
-//rock paper scissors
-
-// psuedo code 
-// User must activate game with @Jacob: Let's play! == Jacob, Ok buddy you got $100 bucks to bet let's go! Send your pick in this format "Rock; 25"
-// should I do it as a best of 10? With rewards? 
-// should I keep score using an array? Should we have a betting component? 
-// Once the @Jacob (rock, paper, scissors) starts Jacob must make his selection. 
-// After Jacob makes his pick send the results. 
-
-
-// code a simple switch statement and see if it works, with responces to certain words.
-
-
-// also love the fortune telling idea. 
-// basically this is just @Jacob Tell my fortune. 
-// return random terrot card. 
-
-// @Jacob 8ball: Will I make a billion dollars. 
-
-
-
-
-
-
-
-// var compare = function(choice1, choice2)) {
-
-//   switch(choice1, choice2) {
-//     case (choice1 === choice2):
-//       robot.enter(function(res) {
-//   		return res.send("Tie!")});
-//       break;
-
-//     case ("rock", "scissors"):
-//       robot.enter(function(res) {
-//   		return res.send("Tie!")});
-
-//       break;
-//     case "Apple":
-//       text = "How you like them apples?";
-//       break;
-//     default:
-//       text = "fun"
-//   }
-//   document.getElementById("demo").innerHTML = text;
-// }
-
-
-
-// if(choice1 === "rock" && choice2 === "scissors") {
-//         return "rock wins";
-//     } else {
-//         return "paper wins";
-//     }
-// }
-// if(choice1 === "paper") {
-//     if(choice2 === "rock") {
-//         return "paper wins";
-//     } else {
-//         if(choice2 === "scissors") {
-//             return "scissors wins";
-//     }
-// }
-// if(choice1 === "scissors") {
-//     if(choice2 === "rock") {
-//         return "rock wins";
-//     } else {
-//         if(choice2 === "paper") {
-//             return "scissors wins";
-//         }
-//     }
-// }
-
-// if (choice1 === "paper") {
-//     if (choice2 === "rock") {
-//         return "paper wins";
-//     } else {
-//         if (choice2 === "scissors") {
-//             return "scissors wins";
-//         }
-//     }
-//     if (choice1 === "scissors") {
-//         if (choice2 === "rock") {
-//             return "rock wins";
-//         } else {
-//             if (choice2 === "paper") {
-//                 return "scissors wins";
-//             }
-//         }
-//     }
-// }
-
 
 
 
