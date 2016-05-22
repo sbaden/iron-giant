@@ -85,7 +85,7 @@ robot.hear(/WAR (.*)/i, function(res){
 
 
 
-	res.reply("your card is " + random1 + " |||| " + "My card is " + random2 + " |||| " + "Your new balance is ")
+	res.reply("your card is " + rollDice() + " |||| " + "My card is " + rollDice() + " |||| " + "Your new balance is ")
 
 
 
