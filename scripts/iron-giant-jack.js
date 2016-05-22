@@ -44,7 +44,7 @@ robot.hear(/RPS (.*)/i, function(res){
 	}
 };
 
-	res.reply("you took: " + temp + "I'm taking " + jacobPickss());
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacobPickss());
 	// return res.reply("you took: " + temp + "I'm taking " + jacobPickss);
 
 });
