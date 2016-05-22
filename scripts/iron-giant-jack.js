@@ -79,8 +79,21 @@ robot.hear(/WAR (.*)/i, function(res){
 		  return myNum;
 		}
 
+		var card1 = getCard();
+		var card2 = getCard();
 
-	res.reply("your card is " + getCard() + " |||| " + "My card is " + getCard() + " |||| " + "Your new balance is ")
+		function WinorLose(){
+			if (card1 === card2){
+				return "WAR!!!!";
+			} else if (card1 > card2) {
+				return "You Win";
+			} else {
+				return "Jacob Wins";
+			}
+		}
+
+
+	res.reply("|| " + card1 + " || " + card2 + " || " + "Outcome: " + WinorLose())
 
 
 
