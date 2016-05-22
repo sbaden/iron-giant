@@ -74,18 +74,13 @@ robot.hear(/WAR (.*)/i, function(res){
 	res.reply("Casino WAR it is!!! Your starting balance will be " + temp);
 
 
-		function rollDice(){
-			var random1 = RandomNum();
-			var random2 = RandomNum();
-				function RandomNum(){
-					var myNum = (Math.floor((Math.random() * 12 )+ 1));
-					return " " + myNum;
-				}
+		function getCard(){
+		  var myNum = (Math.floor((Math.random() * 13 )+ 1));
+		  return myNum;
 		}
 
 
-
-	res.reply("your card is " + rollDice() + " |||| " + "My card is " + rollDice() + " |||| " + "Your new balance is ")
+	res.reply("your card is " + getCard() + " |||| " + "My card is " + getCard() + " |||| " + "Your new balance is ")
 
 
 
