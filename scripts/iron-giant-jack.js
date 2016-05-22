@@ -31,7 +31,7 @@ robot.hear(/Magic8/, function(res){
 
 robot.hear(/number (.*)/i, function(res){
 	var temp;
-	// temp = res.match[1];
+	temp = res.match[1] + 5;
 	return res.reply(temp);
 });
 
