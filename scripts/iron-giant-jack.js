@@ -29,10 +29,24 @@ robot.hear(/Magic8/, function(res){
 // 	return temp  + 5;
 // };
 
-robot.hear(/number (.*)/i, function(res){
+robot.hear(/RPS (.*)/i, function(res){
 	var temp;
-	temp = res.match[1] + 5;
-	return res.reply(temp);
+	temp = res.match[1];
+	
+	var jacobPickss = function(){
+	var computerChoice = Math.random();
+	if (computerChoice <= 0.34) {
+    	return "rock";
+	} else if(computerChoice > 0.34 && computerChoice <= 0.67) {
+    	return "paper";
+	} else {
+    return "scissors";
+	}
+};
+
+	res.reply("you took: " + temp + "I'm taking " + jacobPickss);
+	// return res.reply("you took: " + temp + "I'm taking " + jacobPickss);
+
 });
 
 
@@ -74,16 +88,16 @@ robot.hear(/number (.*)/i, function(res){
 // compare(userChoice, computerChoice)
 
 
-// var jacobPickss = function(){
-// 	var computerChoice = Math.random();
-// 	if (computerChoice <= 0.34) {
-//     	return "rock";
-// 	} else if(computerChoice > 0.34 && computerChoice <= 0.67) {
-//     	return "paper";
-// 	} else {
-//     return "scissors";
-// 	}
-// };
+var jacobPickss = function(){
+	var computerChoice = Math.random();
+	if (computerChoice <= 0.34) {
+    	return "rock";
+	} else if(computerChoice > 0.34 && computerChoice <= 0.67) {
+    	return "paper";
+	} else {
+    return "scissors";
+	}
+};
 
 // var jacobPicks = jacobPickss();
 
