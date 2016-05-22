@@ -26,7 +26,7 @@ robot.hear(/Magic8/, function(res){
 // http://hubot-script-catalog.herokuapp.com/
 
 var sample = function(){
-	return 1 + 4
+	return user + 5;
 };
 
 robot.hear(/number (.*)/i, function(res){
