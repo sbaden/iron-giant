@@ -46,20 +46,26 @@ robot.hear(/RPS: (.*)/i, function(res){
 
 	var jacob1 = jacobPickss();
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " + compare(temp, jacob1));
 
 var compare = function (temp, jacob1) {
 
  if(temp === jacob1)
     return "The result is a tie!";
  switch(temp+jacob1){
-    case "rockscissors": case "scissorsrock":
+    case "rockscissors": 
+    case "scissorsrock":
         return "rock wins";
-    case "rockpaper": case "paperrock":
+    case "rockpaper": 
+    case "paperrock":
         return "paper wins";
     default: return "scissors wins";
  }
 };
+
+
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " + compare(temp, jacob1));
+
+
 
 });
 
