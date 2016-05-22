@@ -25,14 +25,14 @@ robot.hear(/Magic8/, function(res){
 // 9gag.coffee
 // http://hubot-script-catalog.herokuapp.com/
 
-var sample = function(){
-	return temp + 5;
-};
+// var sample = function(){
+// 	return temp  + 5;
+// };
 
 robot.hear(/number (.*)/i, function(res){
 	var temp;
-	temp = res.match[1];
-	return res.reply(temp + " " + sample());
+	// temp = res.match[1];
+	return res.reply(temp);
 });
 
 
