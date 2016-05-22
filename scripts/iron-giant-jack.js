@@ -44,7 +44,9 @@ robot.hear(/RPS: (.*)/i, function(res){
 	}
 };
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacobPickss());
+	var jacob1 = jacobPickss();
+
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1);
 	
 // var compare = function (choice1, choice2)
 // {
