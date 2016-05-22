@@ -63,7 +63,7 @@ var compare = function (temp, jacob1) {
 };
 
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " + compare(temp, jacob1));
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| " + compare(temp, jacob1));
 
 
 
