@@ -71,8 +71,8 @@ robot.hear(/RPS: (.*)/i, function(res){
 robot.hear(/WAR (.*)/i, function(res){
 	var temp
 	temp = res.match[1];
-	res.reply("Your starting balance will be " + temp);
-	// res.reply("your card is " + " |||| " + "My card is " + " |||| " + "Your new balance is ")
+	res.reply("Casino WAR it is!!! Your starting balance will be " + temp);
+	res.reply("your card is " + " |||| " + "My card is " + " |||| " + "Your new balance is ")
 
 	// function rollDice(){
 
