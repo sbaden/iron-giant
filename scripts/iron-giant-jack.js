@@ -72,19 +72,22 @@ robot.hear(/WAR (.*)/i, function(res){
 	var temp
 	temp = res.match[1];
 	res.reply("Casino WAR it is!!! Your starting balance will be " + temp);
-	res.reply("your card is " + " |||| " + "My card is " + " |||| " + "Your new balance is ")
-
-	// function rollDice(){
-
-	// 	var random1 = RandomNum();
-	// 	var random2 = RandomNum();
 
 
-	// 	function RandomNum(){
-	// 		var myNum = (Math.floor((Math.random() *6 )+ 1));
-	// 		return "dice-" + myNum;
-	// 	}
-	// }
+		function rollDice(){
+			var random1 = RandomNum();
+			var random2 = RandomNum();
+				function RandomNum(){
+					var myNum = (Math.floor((Math.random() * 12 )+ 1));
+					return " " + myNum;
+				}
+		}
+
+
+
+	res.reply("your card is " + random1 + " |||| " + "My card is " + random2 + " |||| " + "Your new balance is ")
+
+
 
 });
 
