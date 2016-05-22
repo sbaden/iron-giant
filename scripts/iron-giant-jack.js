@@ -22,42 +22,92 @@ robot.hear(/Magic8/, function(res){
 // get user's input 
 // compair = win or lose
 
+// 9gag.coffee
+// http://hubot-script-catalog.herokuapp.com/
 
-var jacobPickss = function(){
-	var computerChoice = Math.random();
-	if (computerChoice <= 0.34) {
-    	return "rock";
-	} else if(computerChoice > 0.34 && computerChoice <= 0.67) {
-    	return "paper";
-	} else {
-    return "scissors";
+
+robot.here(/doing work (.*)/, function(res){
+	var = user 
+	var user1 = function() {
+		return 1 + user;
 	}
-};
-
-var jacobPicks = jacobPickss();
-
-var RPS = function(user, jacobPicks){
-
-var compare = function (user, jacobPicks) {
- if(user===jacobPicks)return "The result is a tie!";
- switch(user+jacobPicks){
-    case "rockscissors": case "scissorsrock":
-        return "rock wins";
-    case "rockpaper": case "paperrock":
-        return "paper wins";
-    default: return "scissors wins";
- }
-};
-};
+	user1(); 
+	return res.send("You said " + user1)
+})
 
 
-robot.respond(/Play RPS: I chose (.*)/i, function(res) {
-   var user;
-   user = res.match[1];
-   return res.reply(RPS(user, jacobPicks));
+// var userChoice = prompt("Do you choose rock, paper or scissors?");
+// var computerChoice = Math.random();
+// if (computerChoice < 0.34) {
+// 	computerChoice = "rock";
+// } else if(computerChoice <= 0.67) {
+// 	computerChoice = "paper";
+// } else {
+// 	computerChoice = "scissors";
+// } console.log("Computer: " + computerChoice);
+
+// var compare = function (choice1, choice2)
+// {
+//    if (choice1 === choice2)
+//    {return "The result is a tie!";}
+//    else if (choice1 === "rock"){
+//        if (choice2 ==="scissors") 
+//        {return "rock wins"} 
+//        else 
+//        {return "paper wins"}
+//        }
+//    else if (choice1 === "paper"){
+//        if (choice2 ==="rock") 
+//        {return "paper wins"} 
+//        else 
+//        {return "scissors wins"}
+//        }
+//     else if (choice1 === "scissors"){
+//        if (choice2 === "rock") 
+//        {return "rock wins"} 
+//        else (choice2 === "paper")
+//        {return "scissors wins"}
+//        }
+//     }
+
+// compare(userChoice, computerChoice)
+
+
+// var jacobPickss = function(){
+// 	var computerChoice = Math.random();
+// 	if (computerChoice <= 0.34) {
+//     	return "rock";
+// 	} else if(computerChoice > 0.34 && computerChoice <= 0.67) {
+//     	return "paper";
+// 	} else {
+//     return "scissors";
+// 	}
+// };
+
+// var jacobPicks = jacobPickss();
+
+// var RPS = function(user, jacobPicks){
+
+// var compare = function (user, jacobPicks) {
+//  if(user===jacobPicks)return "The result is a tie!";
+//  switch(user+jacobPicks){
+//     case "rockscissors": case "scissorsrock":
+//         return "rock wins";
+//     case "rockpaper": case "paperrock":
+//         return "paper wins";
+//     default: return "scissors wins";
+//  }
+// };
+// };
+
+
+// robot.respond(/Play RPS: I chose (.*)/i, function(res) {
+//    var user;
+//    user = res.match[1];
+//    return res.reply(RPS(user, jacobPicks));
    
 
-});
+// });
 
 
 
