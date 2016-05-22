@@ -27,12 +27,8 @@ robot.hear(/Magic8/, function(res){
 
 
 robot.here(/doing work (.*)/, function(res){
-	var = user 
-	var user1 = function() {
-		return 1 + user;
-	}
-	user1(); 
-	return res.send("You said " + user1)
+	var = user;
+	return res.send("You said " + user)
 })
 
 
