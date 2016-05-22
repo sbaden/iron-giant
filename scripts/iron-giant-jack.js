@@ -68,7 +68,7 @@ robot.hear(/RPS: (.*)/i, function(res){
 
 // start of WAR, played one time. 
 // robot.hear(/WAR (.*)/i, function(res){
-robot.hear(/WAR/, function(res){
+robot.hear(/WAR single game/, function(res){
 	var temp
 	temp = res.match[1];
 	res.reply("Casino WAR it is!!!");
