@@ -11,6 +11,8 @@ module.exports = function(robot) {
 // 9gag.coffee
 // http://hubot-script-catalog.herokuapp.com/
 
+// start of magic8 
+
 var magic8 = ["It is certain", "It is decidedly so", "Without a doubt", "Yes, definitely", "You may rely on it", "As I see it, yes",
 "Most likely", "Outlook good", "Yes", "Signs point to yes", "Reply hazy try again", "Ask again later", "Better not tell you now", 
 "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good",
@@ -64,86 +66,27 @@ robot.hear(/RPS: (.*)/i, function(res){
 });
 
 
+// start of WAR 
 
-// var userChoice = prompt("Do you choose rock, paper or scissors?");
-// var computerChoice = Math.random();
-// if (computerChoice < 0.34) {
-// 	computerChoice = "rock";
-// } else if(computerChoice <= 0.67) {
-// 	computerChoice = "paper";
-// } else {
-// 	computerChoice = "scissors";
-// } console.log("Computer: " + computerChoice);
+robot.hear(/WAR (.*)/i, function(res){
+	var temp
+	temp = res.match[1];
+	res.reply("Your starting balance will be " + temp);
+	res.reply("your card is " + " |||| " + "My card is " + " |||| " + "Your new balance is ")
 
-// var compare = function (choice1, choice2)
-// {
-//    if (choice1 === choice2)
-//    {return "The result is a tie!";}
-//    else if (choice1 === "rock"){
-//        if (choice2 ==="scissors") 
-//        {return "rock wins"} 
-//        else 
-//        {return "paper wins"}
-//        }
-//    else if (choice1 === "paper"){
-//        if (choice2 ==="rock") 
-//        {return "paper wins"} 
-//        else 
-//        {return "scissors wins"}
-//        }
-//     else if (choice1 === "scissors"){
-//        if (choice2 === "rock") 
-//        {return "rock wins"} 
-//        else (choice2 === "paper")
-//        {return "scissors wins"}
-//        }
-//     }
+	// function rollDice(){
 
-// compare(userChoice, computerChoice)
+	// 	var random1 = RandomNum();
+	// 	var random2 = RandomNum();
 
 
-// var jacobPickss = function(){
-// 	var computerChoice = Math.random();
-// 	if (computerChoice <= 0.34) {
-//     	return "rock";
-// 	} else if(computerChoice > 0.34 && computerChoice <= 0.67) {
-//     	return "paper";
-// 	} else {
-//     return "scissors";
-// 	}
-// };
+	// 	function RandomNum(){
+	// 		var myNum = (Math.floor((Math.random() *6 )+ 1));
+	// 		return "dice-" + myNum;
+	// 	}
+	// }
 
-// var jacobPicks = jacobPickss();
-
-// var RPS = function(user, jacobPicks){
-
-// var compare = function (user, jacobPicks) {
-//  if(user===jacobPicks)return "The result is a tie!";
-//  switch(user+jacobPicks){
-//     case "rockscissors": case "scissorsrock":
-//         return "rock wins";
-//     case "rockpaper": case "paperrock":
-//         return "paper wins";
-//     default: return "scissors wins";
-//  }
-// };
-// };
-
-
-// robot.respond(/Play RPS: I chose (.*)/i, function(res) {
-//    var user;
-//    user = res.match[1];
-//    return res.reply(RPS(user, jacobPicks));
-   
-
-// });
-
-
-
-
-
-
-
+});
 
 // robot.hear(/what did you pick/, function(res){
 // 	res.send(jacobPicks());
