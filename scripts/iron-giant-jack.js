@@ -103,33 +103,54 @@ robot.hear(/WAR/, function(res){
 // doubles up at a loss but only bets 10 after a win.
 //
 
-// robot.hear(/WAR (.*)/i, function(res){
-// 	var temp
-// 	temp = res.match[1];
-// 	res.reply("Casino WAR it is!!! Your starting balance will be " + temp);
+// Steps 
+// 1) run the game
+// 2) record who wins (push into an array)
+
+robot.hear(/WAR (.*)/i, function(res){
+	var temp
+	temp = res.match[1];
+	res.reply("Casino WAR it is!!! We will play " + temp + " total games");
+
+		var card1 = getCard();
+		var card2 = getCard();
+		var jacobwins = 0;
+		var userwins = 0;
+
+		function continiousPlay(){
+		  for(i=0; i <= temp; i++){
+		  Game();
+		 }}
+
+		function getCard(){
+		  var myNum = (Math.floor((Math.random() * 13 )+ 1));
+		  return myNum;
+		}	
+  
+		function Game(){
+		  var card1 = getCard();
+		  var card2 = getCard(); 
+		  
+		  function WinorLose(){
+		    if (card1 === card2){
+			return "WAR!!!!";
+			} else if (card1 > card2) {
+			  userwins++;
+		      return "You Win";
+			} else {
+		      jacobwins++;
+			return "Jacob Wins";
+			}}
+  
+  			res.reply("|| " + card1 + " || " + card2 + " || " + "Outcome: " + WinorLose());
+		}
 
 
-// 		function getCard(){
-// 		  var myNum = (Math.floor((Math.random() * 13 )+ 1));
-// 		  return myNum;
-// 		}
+		continiousPlay();
+		res.reply(userwins + " ||| " + jacobwins);
 
-// 		var card1 = getCard();
-// 		var card2 = getCard();
 
-// 		function WinorLose(){
-// 			if (card1 === card2){
-// 				return "WAR!!!!";
-// 			} else if (card1 > card2) {
-// 				return "You Win";
-// 			} else {
-// 				return "Jacob Wins";
-// 			}
-// 		}
-
-// 	res.reply("|| " + card1 + " || " + card2 + " || " + "Outcome: " + WinorLose())
-
-// });
+});
 
 
 
