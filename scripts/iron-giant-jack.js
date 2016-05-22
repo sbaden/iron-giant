@@ -43,9 +43,8 @@ robot.hear(/RPS: (.*)/i, function(res){
     return "scissors";
 	}
 };
-	var jacob1 = jacobPickss();
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1);
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacobPickss());
 	
 // var compare = function (choice1, choice2)
 // {
