@@ -47,35 +47,33 @@ robot.hear(/RPS: (.*)/i, function(res){
 	var jacob1 = jacobPickss();
 
 	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1);
+	res.reply(compare());
 	
-// var compare = function (choice1, choice2)
-// {
-//    if (choice1 === choice2)
-//    {return "The result is a tie!";}
-//    else if (choice1 === "rock"){
-//        if (choice2 ==="scissors") 
-//        {return "rock wins"} 
-//        else 
-//        {return "paper wins"}
-//        }
-//    else if (choice1 === "paper"){
-//        if (choice2 ==="rock") 
-//        {return "paper wins"} 
-//        else 
-//        {return "scissors wins"}
-//        }
-//     else if (choice1 === "scissors"){
-//        if (choice2 === "rock") 
-//        {return "rock wins"} 
-//        else (choice2 === "paper")
-//        {return "scissors wins"}
-//        }
-//     }
-
-// compare(userChoice, computerChoice)
+var compare = function (temp, jacob1)
+{
+   if (temp === jacob1)
+   {return "The result is a tie!";}
+   else if (temp === "rock"){
+       if (jacob1 ==="scissors") 
+       {return "rock wins"} 
+       else 
+       {return "paper wins"}
+       }
+   else if (temp === "paper"){
+       if (jacob1 ==="rock") 
+       {return "paper wins"} 
+       else 
+       {return "scissors wins"}
+       }
+    else if (temp === "scissors"){
+       if (jacob1 === "rock") 
+       {return "rock wins"} 
+       else (jacob1 === "paper")
+       {return "scissors wins"}
+       }
+    }
 
 
-// 	res.reply(who won);
 
 });
 
