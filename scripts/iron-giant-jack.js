@@ -46,7 +46,7 @@ robot.hear(/RPS: (.*)/i, function(res){
 
 	var jacob1 = jacobPickss();
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " + compare());
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " + compare(temp, jacob1));
 
 var compare = function (temp, jacob1)
 {
