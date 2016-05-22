@@ -66,12 +66,12 @@ robot.hear(/RPS: (.*)/i, function(res){
 });
 
 
-// start of WAR 
-
-robot.hear(/WAR (.*)/i, function(res){
+// start of WAR, played one time. 
+// robot.hear(/WAR (.*)/i, function(res){
+robot.hear(/WAR/, function(res){
 	var temp
 	temp = res.match[1];
-	res.reply("Casino WAR it is!!! Your starting balance will be " + temp);
+	res.reply("Casino WAR it is!!!");
 
 
 		function getCard(){
@@ -92,12 +92,46 @@ robot.hear(/WAR (.*)/i, function(res){
 			}
 		}
 
-
 	res.reply("|| " + card1 + " || " + card2 + " || " + "Outcome: " + WinorLose())
 
-
-
 });
+
+// Start of WAR played as many times as the user says. 
+// Trackes wins and losses, if we get a lose double up bet
+// We go to the table with 1000 bucks are are betting 10 each time. 
+// 10 | 20 | 40 | 80 | 160 | 320 | 370 (because we only have 1000)
+// doubles up at a loss but only bets 10 after a win.
+//
+
+// robot.hear(/WAR (.*)/i, function(res){
+// 	var temp
+// 	temp = res.match[1];
+// 	res.reply("Casino WAR it is!!! Your starting balance will be " + temp);
+
+
+// 		function getCard(){
+// 		  var myNum = (Math.floor((Math.random() * 13 )+ 1));
+// 		  return myNum;
+// 		}
+
+// 		var card1 = getCard();
+// 		var card2 = getCard();
+
+// 		function WinorLose(){
+// 			if (card1 === card2){
+// 				return "WAR!!!!";
+// 			} else if (card1 > card2) {
+// 				return "You Win";
+// 			} else {
+// 				return "Jacob Wins";
+// 			}
+// 		}
+
+// 	res.reply("|| " + card1 + " || " + card2 + " || " + "Outcome: " + WinorLose())
+
+// });
+
+
 
 // robot.hear(/what did you pick/, function(res){
 // 	res.send(jacobPicks());
