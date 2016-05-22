@@ -26,7 +26,7 @@ robot.hear(/Magic8/, function(res){
 // http://hubot-script-catalog.herokuapp.com/
 
 
-robot.here(/doing work (.*)/, function(res){
+robot.here(/doing work (.*)/i, function(res){
 	var = user;
 	return res.send("You said " + user)
 })
