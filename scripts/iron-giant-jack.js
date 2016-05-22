@@ -116,6 +116,7 @@ robot.hear(/WAR (.*)/i, function(res){
 		var card2 = getCard();
 		var jacobwins = 0;
 		var userwins = 0;
+		var war = 0;
 
 		function continiousPlay(){
 		  for(i=0; i <= temp; i++){
@@ -133,6 +134,7 @@ robot.hear(/WAR (.*)/i, function(res){
 		  
 		  function WinorLose(){
 		    if (card1 === card2){
+			war++;
 			return "WAR!!!!";
 			} else if (card1 > card2) {
 			  userwins++;
@@ -147,7 +149,7 @@ robot.hear(/WAR (.*)/i, function(res){
 
 
 		continiousPlay();
-		res.reply(userwins + " ||| " + jacobwins);
+		res.reply(userwins + " ||| " + jacobwins + " ||| " + "WAR " + war);
 
 
 });
