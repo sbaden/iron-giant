@@ -30,8 +30,7 @@ robot.hear(/number (.*)/i, function(res){
 	var temp;
 	var number_add = 555;
 	temp += number_add;
-	temp = res.match[1];
-	return res.reply(temp);
+	return res.send(temp);
 });
 
 
