@@ -46,10 +46,10 @@ robot.hear(/RPS: (.*)/i, function(res){
 
 	var jacob1 = jacobPickss();
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " + compare(temp, jacob1));
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " );
 
-var compare = function (temp, jacob1)
-{
+var compare = function (temp, jacob1) {
+
    if (temp === jacob1)
    {return "The result is a tie!";}
    else if (temp === "rock"){
