@@ -48,6 +48,7 @@ robot.hear(/RPS: (.*)/i, function(res){
 
 	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1);
 	res.reply("so who won?" + compare(temp, jacob1));
+	res.reply("working")
 	
 var compare = function (temp, jacob1)
 {
