@@ -7,6 +7,10 @@ module.exports = function(robot) {
 // RPS
 // War
 
+// check out below. 
+// 9gag.coffee
+// http://hubot-script-catalog.herokuapp.com/
+
 var magic8 = ["It is certain", "It is decidedly so", "Without a doubt", "Yes, definitely", "You may rely on it", "As I see it, yes",
 "Most likely", "Outlook good", "Yes", "Signs point to yes", "Reply hazy try again", "Ask again later", "Better not tell you now", 
 "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good",
@@ -17,17 +21,7 @@ robot.hear(/Magic8/, function(res){
     });
 
 
-// Rock Paper Scissors
-// get Jacob's choice 
-// get user's input 
-// compair = win or lose
-
-// 9gag.coffee
-// http://hubot-script-catalog.herokuapp.com/
-
-// var sample = function(){
-// 	return temp  + 5;
-// };
+// start of rock, paper, scissors
 
 robot.hear(/RPS: (.*)/i, function(res){
 	var temp;
@@ -47,20 +41,20 @@ robot.hear(/RPS: (.*)/i, function(res){
 	var jacob1 = jacobPickss();
 
 
-var compare = function (temp, jacob1) {
+		var compare = function (temp, jacob1) {
 
- if(temp === jacob1)
-    return "The result is a tie!";
- switch(temp+jacob1){
-    case "rockscissors": 
-    case "scissorsrock":
-        return "rock wins";
-    case "rockpaper": 
-    case "paperrock":
-        return "paper wins";
-    default: return "scissors wins";
- }
-};
+		 if(temp === jacob1)
+		    return "The result is a tie!";
+		 switch(temp+jacob1){
+		    case "rockscissors": 
+		    case "scissorsrock":
+		        return "rock wins";
+		    case "rockpaper": 
+		    case "paperrock":
+		        return "paper wins";
+		    default: return "scissors wins";
+		 }
+		};
 
 
 	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| " + compare(temp, jacob1));
