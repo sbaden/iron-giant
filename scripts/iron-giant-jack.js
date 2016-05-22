@@ -29,7 +29,7 @@ robot.hear(/Magic8/, function(res){
 // 	return temp  + 5;
 // };
 
-robot.hear(/RPS (.*)/i, function(res){
+robot.hear(/RPS: (.*)/i, function(res){
 	var temp;
 	temp = res.match[1];
 	
@@ -43,9 +43,38 @@ robot.hear(/RPS (.*)/i, function(res){
     return "scissors";
 	}
 };
+	var jacob1 = jacobPickss();
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacobPickss());
-	// return res.reply("you took: " + temp + "I'm taking " + jacobPickss);
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1);
+	
+var compare = function (choice1, choice2)
+{
+   if (choice1 === choice2)
+   {return "The result is a tie!";}
+   else if (choice1 === "rock"){
+       if (choice2 ==="scissors") 
+       {return "rock wins"} 
+       else 
+       {return "paper wins"}
+       }
+   else if (choice1 === "paper"){
+       if (choice2 ==="rock") 
+       {return "paper wins"} 
+       else 
+       {return "scissors wins"}
+       }
+    else if (choice1 === "scissors"){
+       if (choice2 === "rock") 
+       {return "rock wins"} 
+       else (choice2 === "paper")
+       {return "scissors wins"}
+       }
+    }
+
+compare(userChoice, computerChoice)
+
+
+	res.reply(who won);
 
 });
 
