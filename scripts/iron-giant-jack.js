@@ -46,10 +46,8 @@ robot.hear(/RPS: (.*)/i, function(res){
 
 	var jacob1 = jacobPickss();
 
-	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1);
-	res.reply("so who won?" + compare(temp, jacob1));
-	res.reply("working")
-	
+	res.reply("YOU: " + temp + " ||| " + "Jacob: " + jacob1 + " ||||| Winner is: " + compare());
+
 var compare = function (temp, jacob1)
 {
    if (temp === jacob1)
