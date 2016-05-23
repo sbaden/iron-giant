@@ -20,7 +20,7 @@ module.exports = function(robot) {
       };
     };
 
-    return res.reply(results[0]);
+    return res.reply(results[1]);
   });
 
   robot.hear(/Bye!/, function(res){
