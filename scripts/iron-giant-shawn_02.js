@@ -10,7 +10,7 @@ module.exports = function(robot) {
     for (key in ref) {
       if (!hasProp.call(ref, key)){ 
         continue;
-        user = ref[key];
+        var user = ref[key];
         response += user.id + " " + user.name;
 
         if (user.email_address) { response += " <" + user.email_address + ">"; }
