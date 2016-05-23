@@ -1,8 +1,5 @@
 module.exports = function(robot) {
   robot.respond(/show users$/i, function(res) {
-    var users;
-    var user;
-    var key;
     var response = "";
     var ref = robot.brain.data.users;
     var results = [];
@@ -11,20 +8,16 @@ module.exports = function(robot) {
     for (key in ref) {
       if (!hasProp.call(ref, key)){ 
         continue;
-        user = ref[key];
+        var user = ref[key];
         response += user.id + " " + user.name;
 
         if (user.email_address) { response += " <" + user.email_address + ">"; }
 
-        // results.push(response += "\n");
-        return res.send(response += "\n");
+        results.push(response += "\n");
+        //return res.send(response += "\n");
       };
     };
 
-    //return res.send(results);
-  });
-
-  robot.hear(/Bye!/, function(res){
-      return res.send("Goodbye!");
+    return res.send(results);
   });
 };
