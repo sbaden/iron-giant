@@ -6,7 +6,7 @@ module.exports = function(robot) {
     var hasProp = {}.hasOwnProperty;
 
     for (key in ref) {
-      if (!hasProp.call(ref, key)) {
+      if (!hasProp.call(ref, key)) 
         continue;
         var user = ref[key];
         response += user.id + " " + user.name;
@@ -14,8 +14,8 @@ module.exports = function(robot) {
         if (user.email_address) { response += " <" + user.email_address + ">"; }
 
         results.push(response += "\n");
-      };
+      }
 
       return res.send(results);
-    };
+    });
 };
