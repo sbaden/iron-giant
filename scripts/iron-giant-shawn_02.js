@@ -18,7 +18,7 @@ module.exports = function(robot) {
       };
     };
 
-    return res.reply(results);
+    return res.reply(results[0]);
   });
 
   robot.hear(/Bye!/, function(res){
