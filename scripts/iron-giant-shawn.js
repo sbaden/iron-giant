@@ -29,9 +29,9 @@ module.exports = function(robot) {
         "No. There is... another... Sky... walker..."
     ];
 
-    robot.hear(/Yoda!/, function(res){
+    robot.respond(/Yoda!/, function(res){
         // return res.send("No but I wish I was!");
-        return res.send(res.random(quotes));
+        return res.reply(res.random(quotes));
     });
 
     var enterReplies = ['Hogarth, is that you?', 'Welcome to the party!'];
