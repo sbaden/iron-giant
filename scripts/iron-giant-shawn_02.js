@@ -2,10 +2,10 @@ var hasProp = {}.hasOwnProperty;
 
 module.exports = function(robot) {
   return robot.respond(/show users$/i, function(res) {
-    var key, ref, response, results, user;
-    response = "";
-    ref = robot.brain.data.users;
-    results = [];
+    var user;
+    var response = "";
+    var ref = robot.brain.data.users;
+    var results = [];
     for (key in ref) {
       if (!hasProp.call(ref, key)) continue;
         user = ref[key];
