@@ -5,15 +5,19 @@ module.exports = function(robot) {
     var ref = robot.brain.data.users;
     var results = [];
     var hasProp = {}.hasOwnProperty;
+
     for (key in ref) {
       if (!hasProp.call(ref, key)) continue;
         user = ref[key];
         response += user.id + " " + user.name;
+
         if (user.email_address) {
           response += " <" + user.email_address + ">";
         }
+
         results.push(response += "\n");
       }
-      return results;
+
+      return res.send(results);
     });
 };
