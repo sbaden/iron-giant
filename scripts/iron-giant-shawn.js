@@ -43,8 +43,7 @@ module.exports = function(robot) {
       return robot.leave(function(res) {
         return res.send(res.random(leaveReplies));
     });
-
-    robot.hear(/Bye!/, function(res){
-        return res.send("Goodbye!");
-    });
 };
+
+
+
