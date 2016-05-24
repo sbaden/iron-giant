@@ -159,7 +159,7 @@ robot.hear(/WAR (.*)/i, function(res){
 
 var array = [];
 
-robot.respond(/log:(.*)/i, function(res){
+robot.respond(/(.*)/i, function(res){
 var temp
 temp = res.match[1];
 array.push(temp);
