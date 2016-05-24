@@ -162,8 +162,8 @@ var array = [];
 robot.respond(/(.*)/i, function(res){
 var temp
 temp = res.match[1];
-array.push(temp);
-return res.reply("logged: " + temp);
+array.push(" | " + temp + " | ");
+//return res.reply("logged: " + temp);
  });
 
 robot.hear(/what did you log/, function(res){
