@@ -6,8 +6,8 @@ module.exports = function(robot) {
     var hasProp = {}.hasOwnProperty;
 
     for (key in ref) {
-      if (!hasProp.call(ref, key)) 
-        continue;
+      // if (!hasProp.call(ref, key)) 
+      //   continue;
         var user = ref[key];
         response += user.id + " " + user.name;
 
