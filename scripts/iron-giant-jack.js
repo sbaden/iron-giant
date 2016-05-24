@@ -154,12 +154,21 @@ robot.hear(/WAR (.*)/i, function(res){
 
 });
 
+// start of program which logs all conversations
 
 
-// robot.hear(/what did you pick/, function(res){
-// 	res.send(jacobPicks());
-// });
+var array = [];
 
+robot.respond(/(.*)/i, function(res){
+var temp
+temp = res.match[1];
+array.push(" | " + temp + " | ");
+//return res.reply("logged: " + temp);
+ });
+
+robot.hear(/what did you log/, function(res){
+  return res.reply("I logged all this stuff " + array);
+});
 
 // robot.respond(/hello (.*)/i, function(res){
 // 	var temp;
