@@ -156,19 +156,19 @@ robot.hear(/WAR (.*)/i, function(res){
 
 // start of program which logs all conversations
 
+
 var a = [];
 
-robot.hear(/:(.*)/i, function(res){
-var userinput;
-userinput = res.match[1];
-a.push(userinput);
-res.send("logged: " + userinput);
+robot.respond(/log: (.*)/i, function(res){
+var temp
+temp = res.match[1];
+a.push(temp);
+return res.reply("logged: " + temp);
  });
 
-robot.hear(/logout all info/), function(res){
-	res.send(a);
-}
-
+robot.hear /what did you log/i, function(res){
+  return res.send(a);
+};
 
 // robot.respond(/hello (.*)/i, function(res){
 // 	var temp;
