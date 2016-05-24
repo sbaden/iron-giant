@@ -166,9 +166,9 @@ array.push(temp);
 return res.reply("logged: " + temp);
  });
 
-// robot.hear /what did you log/i, function(res){
-//   return res.send(a);
-// };
+robot.hear(/what did you log/i, function(res){
+  return res.send(a);
+});
 
 // robot.respond(/hello (.*)/i, function(res){
 // 	var temp;
