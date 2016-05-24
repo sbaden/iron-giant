@@ -13,10 +13,10 @@ module.exports = function(robot) {
 
         if (user.email_address) { response += " <" + user.email_address + ">"; }
 
-        results.push(response += "\n");
-        // return res.send(response += "\n");
+        // results.push(response += "\n");
+        return res.send(response += "\n");
     };
 
-    return res.send(results);
+    // return res.send(results);
   });
 };
