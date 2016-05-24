@@ -154,11 +154,20 @@ robot.hear(/WAR (.*)/i, function(res){
 
 });
 
+// start of program which logs all conversations
 
+var a = [];
 
-// robot.hear(/what did you pick/, function(res){
-// 	res.send(jacobPicks());
-// });
+robot.hear(/(.*)/i, function(res){
+var userinput;
+userinput = res.match[1];
+a.push(userinput);
+res.send("logged: " + userinput);
+ });
+
+robot.hear(/logout all info/), function(res){
+	res.send(a);
+}
 
 
 // robot.respond(/hello (.*)/i, function(res){
