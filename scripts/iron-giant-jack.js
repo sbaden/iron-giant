@@ -167,7 +167,7 @@ return res.reply("logged: " + temp);
  });
 
 robot.hear(/what did you log/i, function(res){
-  return res.send(a);
+  return res.send(array);
 });
 
 // robot.respond(/hello (.*)/i, function(res){
