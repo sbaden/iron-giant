@@ -166,8 +166,8 @@ array.push(temp);
 return res.reply("logged: " + temp);
  });
 
-robot.hear(/what did you log/i, function(res){
-  return res.send(array);
+robot.hear(/what did you log/, function(res){
+  return res.reply("I logged all this stuff " + array);
 });
 
 // robot.respond(/hello (.*)/i, function(res){
